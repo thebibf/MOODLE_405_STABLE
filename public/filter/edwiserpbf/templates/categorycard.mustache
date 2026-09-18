@@ -1,0 +1,49 @@
+{{!
+    This file is part of Moodle - http://moodle.org/
+
+    Moodle is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Moodle is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+}}
+{{!
+    @template filter_edwiserpbf/categorycard
+
+    Category card template.
+
+    Classes required for JS: None.
+    Data attributes required for JS: None.
+    Context variables required for this template: categories.
+
+    Example context (json):
+    {}
+}}
+{{#categories}}
+<div class="slick-carousel-item h-100">
+    <div class="card-container h-100">
+        <div class="card h-100">
+            <div class="card-header bg-primary">
+                <p class="title1 ellips-item-2">{{{parentname}}}</p>
+                <p class="title2 ellips-item-2">{{{name}}}</p>
+            </div>
+            <p class="card-desc">
+                {{{description}}}
+            </p>
+            <div class="cards-footer">
+                <p class="footer-desc color-primary">
+                    {{coursecount}} {{#str}}courses,filter_edwiserpbf{{/str}}
+                </p>
+                <a href="{{categoryurl}}"><button class="footer-btn btn btn-secondary">{{viewcourses}}</button></a>
+            </div>
+        </div>
+    </div>
+</div>
+{{/categories}}

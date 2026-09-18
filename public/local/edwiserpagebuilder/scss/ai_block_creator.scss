@@ -1,0 +1,344 @@
+// AI Block Creator styles.
+// Styles for the AI badge on the "Create custom block" card,
+// the AI prompt button in the block header, and the AI prompt modal.
+
+// AI Badge - wraps the "Create custom block" card in add-block modal
+// with gradient text, AI badge circle, and hover effect.
+.ai-block-creator-active {
+    position: relative;
+
+    // Gradient text on the footer title.
+    .card-footer .footer-add-link span {
+        // background: linear-gradient(90deg, #e040a0, #a855f7);
+        background:linear-gradient(135deg, #7c3aed, #d946ef);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        font-weight: 600;
+    }
+
+    // AI badge circle positioned at top-right of the card-wrapper.
+    .card-wrapper .card {
+        position: relative;
+
+        &::after {
+            content: 'AI';
+            position: absolute;
+            top: -6px;
+            right: -6px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            // width: 24px;
+            // height: 24px;
+            padding: 4px 8px;
+            border-radius: 10px;
+            background: linear-gradient(135deg, #7c3aed, #d946ef);
+            color: #ffffff;
+            font-size: 10px;
+            font-weight: 700;
+            line-height: 1;
+            z-index: 2;
+            pointer-events: none;
+        }
+    }
+
+    // Hover effect on the card.
+    .card {
+        transition: box-shadow 0.2s ease, transform 0.15s ease;
+    }
+
+    &:hover .card {
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+        transform: translateY(-1px);
+    }
+}
+
+// AI Prompt button in block header.
+.epb-ai-prompt-btn {
+    background: linear-gradient(135deg, #7c3aed, #d946ef) !important;
+    border-color: transparent !important;
+    color: #ffffff !important;
+
+    &:hover {
+        background: linear-gradient(135deg, #9333ea, #6d28d9) !important;
+        color: #ffffff !important;
+    }
+}
+
+// AI Prompt Modal.
+.epb-ai-modal {
+    .modal-dialog {
+        max-width: 990px;
+    }
+
+    .modal-body {
+        padding: 0;
+    }
+}
+
+.epb-ai-prompt-modal-content {
+    position: relative;
+    padding: 24px;
+}
+
+.epb-ai-prompt-form {
+    .epb-ai-prompt-label {
+        font-weight: 600;
+        font-size: 14px;
+        margin-bottom: 8px;
+        color: #313848;
+    }
+
+    .epb-ai-prompt-textarea {
+        resize: vertical;
+        min-height: 100px;
+        font-size: 14px;
+        border-color: #dee2e6;
+
+        &:focus {
+            border-color: #a855f7;
+            box-shadow: 0 0 0 0.2rem rgba(168, 85, 247, 0.15);
+        }
+    }
+
+    .epb-ai-char-count {
+        text-align: right;
+        font-size: 12px;
+        color: #6c757d;
+        margin-top: 4px;
+    }
+
+    .form-group {
+        margin-bottom: 0;
+    }
+}
+
+.epb-ai-optimize-wrapper {
+    margin-bottom: 16px;
+
+    .epb-ai-optimize-link {
+        color: #0051F9;
+        font-size: 13px;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+
+        &.disabled {
+            color: #adb5bd;
+            pointer-events: none;
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
+
+        .fa-magic {
+            margin-right: 4px;
+        }
+    }
+
+    .epb-ai-optimize-loading {
+        color: #6c757d;
+        font-size: 13px;
+    }
+}
+
+.epb-ai-validation-feedback {
+    margin-bottom: 16px;
+
+    .epb-ai-validation-issues,
+    .epb-ai-validation-suggestions {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .epb-ai-feedback-item {
+        font-size: 13px;
+        padding: 8px 12px;
+        margin-bottom: 2px;
+        border-radius: 4px;
+    }
+
+    .epb-ai-feedback-issue {
+        background-color: #fce4ec;
+        color: #b71c1c;
+    }
+
+    .epb-ai-feedback-suggestion {
+        background-color: #F8F9FA;
+        color: #5B6880;
+        gap: 9px;
+        display: flex;
+        flex-direction: column;
+        padding: 12px;
+        border-radius: 10px;
+        
+        .epb-ai-suggestion-list {
+            list-style-type: disc;
+        }
+    }
+
+    .epb-ai-suggestion-title {
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 100%;
+        letter-spacing: 0;
+    }
+
+    .epb-ai-suggestion-list {
+        margin: 0;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 22px;
+        letter-spacing: 0;
+    }
+}
+
+.epb-ai-action-buttons {
+    display: flex;
+    gap: 12px;
+    margin-top: 16px;
+
+    .epb-ai-generate-btn {
+        background: linear-gradient(135deg, #7c3aed, #d946ef) !important;
+        border: 1px solid #a855f7 !important;
+        color: white;
+        border-radius: 5px;
+
+        &:hover {
+            background: linear-gradient(135deg, #9333ea, #6d28d9) !important;
+            border-color: #9333ea !important;
+            color: #fff;
+        }
+
+        &:disabled {
+            background: transparent !important;
+            border-color: #6c757d !important;
+            color: #6c757d !important;
+            cursor: not-allowed;
+            pointer-events: none;
+            
+            & .fa-bolt {
+                color: #6c757d;
+            }
+        }
+    }
+
+    .epb-ai-cancel-btn {
+        border-radius: 5px;
+    }
+}
+
+// Preview section.
+.epb-ai-preview-section {
+    margin-top: 24px;
+    border-top: 1px solid #dee2e6;
+    padding-top: 16px;
+}
+
+.epb-ai-preview-header {
+    margin-bottom: 12px;
+
+    .epb-ai-preview-title {
+        font-weight: 600;
+        font-size: 14px;
+        margin: 0;
+        color: #313848;
+    }
+}
+
+.epb-ai-preview-container {
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    padding: 16px;
+    min-height: 120px;
+    max-height: 400px;
+    overflow-y: auto;
+    background: #ffffff;
+}
+
+.epb-ai-preview-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 16px;
+
+    .epb-ai-insert-btn {
+        background: linear-gradient(135deg, #7c3aed, #d946ef) !important;
+        border-color: #a855f7 !important;
+        color: white !important;
+
+        &:hover {
+            background: linear-gradient(135deg, #9333ea, #6d28d9) !important;
+            border-color: #9333ea !important;
+            color: white !important;
+        }
+    }
+}
+
+// Loading overlay.
+.epb-ai-loading-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.85);
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: inherit;
+}
+
+.epb-ai-loading-content {
+    text-align: center;
+    color: #a855f7;
+
+    .fa-spinner {
+        color: #a855f7;
+    }
+
+    p {
+        color: #495057;
+        font-size: 14px;
+    }
+}
+
+// AI Prompt button in right sidebar.
+.drawer-right.show:has(.epb-ai-prompt-btn) {
+    .controls-wrapper {
+        flex-direction: column;
+    }
+    .block-controls.header {
+        max-width: fit-content;
+        margin-left: auto;
+    }
+}
+
+body:not([class*="edw-m"]) {
+    .drawer.drawer-right.show:has(.epb-ai-prompt-btn){
+        .live-customizer-btn {
+            flex-wrap: wrap;
+            gap: 8px;
+            justify-content: unset !important;
+            margin-bottom: 8px;
+        }
+    }
+}
+
+@media screen and (max-width: 475px) {
+
+    .controls-wrapper:has(.epb-ai-prompt-btn:not(.d-none)) {
+        flex-direction: column;
+        margin-right: 40px;
+    }
+    .block-controls.header {
+        max-width: fit-content;
+        margin-left: auto;
+    }
+
+}

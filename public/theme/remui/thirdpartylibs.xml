@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<libraries>
+  <library>
+    <location>scss/bootstrap</location>
+    <name>Twitter Bootstrap</name>
+    <description>HTML, CSS, and JavaScript framework for developing responsive, mobile-first projects on the web.</description>
+    <version>5.3.3</version>
+    <license>MIT</license>
+    <repository>https://github.com/twbs/bootstrap</repository>
+    <copyrights>
+      <copyright>2011-2021 Twitter, Inc</copyright>
+      <copyright>2011-2021 The Bootstrap Authors</copyright>
+    </copyrights>
+    <customised/>
+  </library>
+  <library>
+    <location>amd/src/bootstrap/</location>
+    <name>Twitter Bootstrap</name>
+    <description>HTML, CSS, and JavaScript framework for developing responsive, mobile-first projects on the web.</description>
+    <version>5.3.3</version>
+    <license>MIT</license>
+    <repository>https://github.com/twbs/bootstrap</repository>
+    <copyrights>
+      <copyright>2011-2021 Twitter, Inc</copyright>
+      <copyright>2011-2021 The Bootstrap Authors</copyright>
+    </copyrights>
+    <customised/>
+  </library>
+  <library>
+    <location>amd/src/index.js</location>
+    <name>Twitter Bootstrap</name>
+    <description>HTML, CSS, and JavaScript framework for developing responsive, mobile-first projects on the web.</description>
+    <version>5.3.3</version>
+    <license>MIT</license>
+    <repository>https://github.com/twbs/bootstrap</repository>
+    <copyrights>
+      <copyright>2011-2021 Twitter, Inc</copyright>
+      <copyright>2011-2021 The Bootstrap Authors</copyright>
+    </copyrights>
+    <customised/>
+  </library>
+  <library>
+    <location>scss/fontawesome</location>
+    <name>Font Awesome - http://fontawesome.com</name>
+    <description>Font Awesome CSS, LESS, and Sass files. Font Awesome is the Internet's icon library and toolkit, used by millions of designers, developers, and content creators.</description>
+    <version>6.7.2</version>
+    <license>(MIT)</license>
+    <repository>https://github.com/FortAwesome/Font-Awesome</repository>
+    <copyrights>
+      <copyright>2023 Fonticons, Inc</copyright>
+    </copyrights>
+  </library>
+  <library>
+    <location>amd/src/html2canvas.js</location>
+    <name>HTML2Canvs - http://html2canvas.hertzen.com</name>
+    <license>(MIT)</license>
+    <version>2.0.1</version>
+    <licenseversion></licenseversion>
+  </library>
+  <library>
+    <location>js/edw_aw.js</location>
+    <name>Sienna Accessibility Widget - https://accessibility-widget.pages.dev/</name>
+    <license>(MIT)</license>
+    <version>2.0.1</version>
+    <repository>https://github.com/bennyluk/Sienna-Accessibility-Widget</repository>
+    <copyrights>
+      <copyright>2025 Benny Luk</copyright>
+    </copyrights>
+  </library>
+
+  <library>
+    <location>js/bundle.js</location>
+    <name>NightEye Dark Mode Library</name>
+    <description>Dark mode JavaScript library with WebGL image processing capabilities. Includes core-js polyfills and regenerator runtime.</description>
+    <version>Unknown</version>
+    <license>Unknown</license>
+    <copyrights>
+      <copyright>Includes core-js 3.0.1 - © 2019 Denis Pushkarev (zloirock.ru)</copyright>
+      <copyright>Includes IEEE754 - https://github.com/feross/ieee754</copyright>
+      <copyright>Includes regenerator runtime - https://github.com/facebook/regenerator</copyright>
+    </copyrights>
+    <customised/>
+  </library>
+</libraries>

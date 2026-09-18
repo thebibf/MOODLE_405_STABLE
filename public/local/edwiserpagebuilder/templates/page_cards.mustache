@@ -1,0 +1,51 @@
+{{!
+    This file is part of Moodle - http://moodle.org/
+
+    Moodle is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Moodle is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+}}
+
+{{#pagegroups}}
+<div class="page-cards-group">
+    <h4 class="page-group-category page-group-category__heading">{{{grouptitle}}}</h4>
+    <div class="row p-0 m-0">
+        {{#pages}}
+        <div class="col-md-3 epb-pcard__container" data-page-id="{{id}}">
+            <div class="epb-pcard">
+                <div class="epb-pcard__img">
+                    <img src="{{{thumbnail}}}">
+                </div>
+                <div class="epb-pcard__body">
+                    <div class="epb-pcard__preview d-flex flex-column align-items-center">
+                        <h4 class="page-name">{{{label}}}</h4>
+                        <div class="btn btn-outline-color btn-preview" data-page-id="{{id}}">
+                            {{#str}}preview, local_edwiserpagebuilder{{/str}}
+                        </div>
+
+                        {{#updateavailable}}
+                        <button class="btn btn-outline-color update-content mt-2" data-page-id="{{id}}" title="{{#str}}updateblockcontent, local_edwiserpagebuilder{{/str}}" data-blockname="{{title}}">
+                            <i class="fa fa-download"></i>
+                        </button>
+                        {{/updateavailable}}
+
+                        <div class="btn btn-delete font-size-20" data-page-id="{{id}}">
+                            <i class="fa fa-trash"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{/pages}}
+    </div>
+</div>
+{{/pagegroups}}

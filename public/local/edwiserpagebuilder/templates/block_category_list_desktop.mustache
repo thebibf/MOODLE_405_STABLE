@@ -1,0 +1,24 @@
+{{!
+    This file is part of Moodle - http://moodle.org/
+
+    Moodle is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Moodle is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+}}
+
+<li class="category-list-item category-selector block-filter active" data-target="all" data-filter="block-filter"><a class="category-link " href="#"><span>{{#str}}staticallcategory, local_edwiserpagebuilder{{/str}}</span></a></li>
+<li class="category-list-item category-selector dynamic-filter active" data-target="all" data-filter="dynamic-filter"><a class="category-link " href="#"><span>{{#str}}dynamicallcategory, local_edwiserpagebuilder{{/str}}</span></a></li>
+<li class="category-list-item category-selector blocklayout-filter active" data-target="all" data-filter="blocklayout-filter"><a class="category-link " href="#"><span>{{#str}}layoutallcategory, local_edwiserpagebuilder{{/str}}</span></a></li>
+{{#categories}}
+{{! categorytitle (About us), categoryvalue(about_us), type(block) use it Whowever you want }}
+  <li class="category-list-item category-selector {{type}}-filter" data-target="{{categoryvalue}}-{{type}}" data-filter="{{type}}-filter"><a class="category-link" href="#"><span>{{{categorytitle}}}</span><span class="edw-icon edw-icon-Cancel fa-solid fa-xmark"></span></a></li>
+{{/categories}}

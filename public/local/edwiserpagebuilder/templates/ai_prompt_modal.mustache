@@ -1,0 +1,132 @@
+{{!
+    This file is part of Moodle - http://moodle.org/
+
+    Moodle is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Moodle is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+}}
+{{!
+    @template local_edwiserpagebuilder/ai_prompt_modal
+
+    AI prompt modal for block creation. Includes textarea, context checkbox,
+    optimize link, preview area, and insert/regenerate buttons.
+
+    Migrated from blocks/edwiseradvancedblock/templates/prompt_modal.mustache
+    and enhanced with preview area, optimize link, and regenerate button.
+
+    Context variables required:
+    * contextid - The Moodle context ID
+    * blockid - Optional block ID for editing existing blocks
+
+    Example context (json):
+    { "contextid": 1, "blockid": "" }
+}}
+<div class="epb-ai-prompt-modal-content">
+    <div class="epb-ai-prompt-form">
+        <div class="form-group">
+            <label for="epb-ai-prompt-textarea" class="epb-ai-prompt-label">
+                {{#str}}ai_enter_prompt, local_edwiserpagebuilder{{/str}}
+            </label>
+            <textarea
+                class="form-control epb-ai-prompt-textarea"
+                id="epb-ai-prompt-textarea"
+                rows="4"
+                placeholder="{{#str}}ai_prompt_placeholder, local_edwiserpagebuilder{{/str}}"
+                maxlength="2000"
+                aria-label="{{#str}}ai_enter_prompt, local_edwiserpagebuilder{{/str}}"
+            ></textarea>
+            <div class="epb-ai-char-count">
+                <span class="epb-ai-char-current">0</span> / 2000
+            </div>
+        </div>
+
+        {{! Optimize prompt link - always visible, disabled when textarea is not active }}
+        <div class="epb-ai-optimize-wrapper" id="epb-ai-optimize-wrapper">
+            <a href="#" class="epb-ai-optimize-link disabled" id="epb-ai-optimize-link" aria-disabled="true">
+                <i class="fa fa-magic"></i>
+                {{#str}}ai_optimize_prompt, local_edwiserpagebuilder{{/str}}
+            </a>
+            <span class="epb-ai-optimize-loading d-none" id="epb-ai-optimize-loading">
+                <i class="fa fa-spinner fa-spin"></i>
+                {{#str}}ai_optimizing, local_edwiserpagebuilder{{/str}}
+            </span>
+        </div>
+
+        {{! Validation feedback area }}
+        <div class="epb-ai-validation-feedback d-none" id="epb-ai-validation-feedback">
+            <div class="epb-ai-validation-issues" id="epb-ai-validation-issues"></div>
+            <div class="epb-ai-validation-suggestions" id="epb-ai-validation-suggestions"></div>
+        </div>
+
+        <div class="epb-ai-action-buttons">
+            <button type="button" class="btn btn-primary epb-ai-generate-btn" id="epb-ai-generate-btn">
+                <i class="fa fa-bolt"></i>
+                {{#str}}ai_generate_block, local_edwiserpagebuilder{{/str}}
+            </button>
+            <button type="button" class="btn btn-secondary epb-ai-cancel-btn" id="epb-ai-cancel-btn">
+                {{#str}}cancel{{/str}}
+            </button>
+        </div>
+
+        {{! BR-008: Free tier requests remaining counter (hidden by default, shown via JS) }}
+        <div class="epb-ai-requests-info d-none" id="epb-ai-requests-info">
+            <small class="text-muted">
+                <i class="fa fa-info-circle"></i>
+                <span id="epb-ai-requests-remaining-text"></span>
+            </small>
+        </div>
+
+        {{! BR-008: Requests exhausted message (hidden by default, shown via JS) }}
+        <div class="epb-ai-requests-exhausted d-none" id="epb-ai-requests-exhausted">
+            <div class="alert alert-warning py-2 px-3 mb-0 mt-2">
+                <i class="fa fa-exclamation-triangle mr-1"></i>
+                {{#str}}ai_requests_exhausted, local_edwiserpagebuilder{{/str}}
+            </div>
+        </div>
+    </div>
+
+    {{! Preview area - hidden until content is generated }}
+    <div class="epb-ai-preview-section d-none" id="epb-ai-preview-section">
+        <div class="epb-ai-preview-header">
+            <h6 class="epb-ai-preview-title">{{#str}}ai_preview, local_edwiserpagebuilder{{/str}}</h6>
+        </div>
+        <div class="epb-ai-preview-container" id="epb-ai-preview-container">
+            {{! Generated content will be rendered here }}
+        </div>
+        <div class="epb-ai-preview-actions">
+            <button type="button" class="btn btn-primary epb-ai-insert-btn" id="epb-ai-insert-btn">
+                <i class="fa fa-check"></i>
+                {{#str}}ai_insert_block, local_edwiserpagebuilder{{/str}}
+            </button>
+            <button type="button" class="btn btn-outline-secondary epb-ai-regenerate-btn" id="epb-ai-regenerate-btn">
+                <i class="fa fa-refresh"></i>
+                {{#str}}ai_regenerate, local_edwiserpagebuilder{{/str}}
+            </button>
+        </div>
+    </div>
+
+    {{! Loading overlay }}
+    <div class="epb-ai-loading-overlay d-none" id="epb-ai-loading-overlay">
+        <div class="epb-ai-loading-content">
+            <i class="fa fa-spinner fa-spin fa-2x"></i>
+            <p class="mt-2">{{#str}}ai_generating, local_edwiserpagebuilder{{/str}}</p>
+            <button type="button" class="btn btn-secondary btn-sm mt-2" id="epb-ai-cancel-generate-btn">
+                {{#str}}ai_cancel_generation, local_edwiserpagebuilder{{/str}}
+            </button>
+        </div>
+    </div>
+
+    {{! Hidden fields }}
+    <input type="hidden" id="epb-ai-context-id" value="{{contextid}}">
+    <input type="hidden" id="epb-ai-block-id" value="{{blockid}}">
+    <input type="hidden" id="epb-ai-tips-title" value="{{#str}}ai_tips_to_write_prompt, local_edwiserpagebuilder{{/str}}">
+</div>

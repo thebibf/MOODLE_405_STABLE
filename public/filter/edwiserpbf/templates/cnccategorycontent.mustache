@@ -1,0 +1,54 @@
+{{!
+    This file is part of Moodle - http://moodle.org/
+
+    Moodle is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Moodle is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+}}
+{{!
+    @template filter_edwiserpbf/cnccategorycontent
+
+    Category content navigation template.
+
+    Classes required for JS: None.
+    Data attributes required for JS: None.
+    Context variables required for this template: categories.
+
+    Example context (json):
+    {}
+}}
+<div class="navbar-carousel collapsed cnc-navbar-carousel">
+    <div class="navbar-inner">
+        <div class="mob-navbar"></div>
+        <ol class="navbar-item-container">
+            {{#categories}}
+            <li class="navitem {{#active}}active{{/active}}" data-categoryid="{{id}}" data-coursecount="{{coursecount}}">
+                <div class="navitem-content">
+                    <P>{{{name}}}</P>
+                    <p class="course-count d-flex align-items-center justify-content-center">{{{coursecount}}}</p>
+                </div>
+            </li>
+            {{/categories}}
+        </ol>
+    </div>
+
+    <button class="dropdown-btn"><img
+            src="{{cdnurl}}/CDN/coursesncategories/dropdown-icon.svg"
+            alt="dropdown icon" /></button>
+
+    <button class="nav-left-arrow border-color-primary hover hover-bg-primary">
+       <span class="fa fa-light fa-angle-left color-primary hover-color-white" aria-hidden="true"></span>
+    </button>
+    <button class="nav-right-arrow border-color-primary hover hover-bg-primary">
+      <span class="fa fa-light fa-angle-right color-primary hover-color-white" aria-hidden="true"></span>
+    </button>
+</div>

@@ -1,0 +1,67 @@
+{{!
+    This file is part of Moodle - http://moodle.org/
+
+    Moodle is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Moodle is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+}}
+{{!
+    @template block_edwiseradvancedblock/edwiserpbf_disabled_message
+
+    Displays a note when the Edwiser Page Builder filter is not enabled or installed.
+
+    Example context (json):
+    {
+        "wwwroot": "https://example.com",
+        "edwiserpbfavailable": true
+    }
+}}
+<div class="edwfilter-note-container">
+    <div class="edwfilter-note">
+            {{#str}}note, block_edwiseradvancedblock{{/str}} <span>
+            {{#edwiserpbfavailable}}
+                {{#str}}not_enable_edwiserpbf, block_edwiseradvancedblock{{/str}}
+                <a href="{{wwwroot}}/admin/filters.php">{{#str}}go_here, block_edwiseradvancedblock{{/str}}</a>
+                {{/edwiserpbfavailable}}
+                {{^edwiserpbfavailable}}
+                {{#str}}not_installed_edwiserpbf, block_edwiseradvancedblock{{/str}}
+                {{/edwiserpbfavailable}}
+            </span>
+    </div>
+</div>
+
+<style>
+
+    .edwfilter-note-container {
+        padding: 10px 40px 40px;
+    }
+
+    .edwfilter-note{
+        font-weight: 700;
+        font-size: 16px;
+        color: rgba(0, 0, 0, 0.8);
+        line-height: 150%;
+        letter-spacing: -1.1%;
+        max-width: 980px;
+        padding: 16px 24px;
+        border-radius: 5px;
+        background-color: rgba(254, 245, 231, 1);
+        margin: 0 auto;
+    }
+
+    .edwfilter-note > span{
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 150%;
+        letter-spacing: -1.1%;
+    }
+</style>

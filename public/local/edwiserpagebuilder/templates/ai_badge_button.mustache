@@ -1,0 +1,42 @@
+{{!
+    This file is part of Moodle - http://moodle.org/
+
+    Moodle is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Moodle is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+}}
+{{!
+    @template local_edwiserpagebuilder/ai_badge_button
+
+    AI-enhanced "Create custom block" card. Wraps the standard block_card
+    partial with AI badge styling when AI is available.
+    Falls back to plain block_card when AI is not available.
+
+    Context variables required:
+    * ai_available - Whether the core AI subsystem is available (Moodle 4.5+)
+    * htmlblock - The htmlblock category data from block_handler (has blocks array)
+
+    Example context (json):
+    { "ai_available": true, "htmlblock": { "blocks": [{"title": "Create custom blocks"}] } }
+}}
+{{#ai_available}}
+<div class="ai-block-creator-active">
+    {{#htmlblock}}
+        {{> local_edwiserpagebuilder/block_card }}
+    {{/htmlblock}}
+</div>
+{{/ai_available}}
+{{^ai_available}}
+{{#htmlblock}}
+    {{> local_edwiserpagebuilder/block_card }}
+{{/htmlblock}}
+{{/ai_available}}

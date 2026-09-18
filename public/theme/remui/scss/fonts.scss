@@ -1,0 +1,47 @@
+// Import required fonts
+
+@font-face { /* where FontName and fontname represents the name of the font you want to add */
+    font-family: 'Inter';
+    src: url([[font:theme|Inter.ttf]]) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face { /* where FontName and fontname represents the name of the font you want to add */
+    font-family: 'Remui';
+    src: url([[font:theme|Remui.eot]]);
+    src:
+        url([[font:theme|Remui.eot]]) format('embedded-opentype'),
+        url([[font:theme|Remui.woff]]) format('woff'),
+        url([[font:theme|Remui.ttf]]) format('truetype'),
+        url([[font:theme|Remui.svg]]) format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: 'Remui-v1';
+    src: url([[font:theme|Remui-v1.eot]]);
+    src:
+        url([[font:theme|Remui-v1.eot]]) format('embedded-opentype'),
+        url([[font:theme|Remui-v1.woff]]) format('woff'),
+        url([[font:theme|Remui-v1.ttf]]) format('truetype'),
+        url([[font:theme|Remui-v1.svg]]) format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: 'Remui-v2';
+    src: url([[font:theme|Remui-v2.eot]]);
+    src:
+        url([[font:theme|Remui-v2.eot]]) format('embedded-opentype'),
+        url([[font:theme|Remui-v2.woff]]) format('woff'),
+        url([[font:theme|Remui-v2.ttf]]) format('truetype'),
+        url([[font:theme|Remui-v2.svg]]) format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}

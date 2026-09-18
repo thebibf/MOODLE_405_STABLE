@@ -1,0 +1,269 @@
+<?xml version="1.0"?>
+<libraries>
+  <library>
+    <location>libs/builder</location>
+    <name>VvvebJs</name>
+    <license>Apache-2.0</license>
+    <version>0.1</version>
+    <licenseversion></licenseversion>
+  </library>
+  <library>
+    <location>libs/swiper</location>
+    <name>Swiper</name>
+    <license>MIT</license>
+    <version>11.0.5</version>
+    <licenseversion></licenseversion>
+  </library>
+  <library>
+    <location>libs/aos</location>
+    <name>AOS - Animate On Scroll</name>
+    <license>MIT</license>
+    <version>2.3.4</version>
+    <licenseversion></licenseversion>
+  </library>
+  <library>
+    <location>libs/codemirror</location>
+    <name>CodeMirror</name>
+    <license>MIT</license>
+    <version>5.36.0</version>
+    <licenseversion></licenseversion>
+  </library>
+  <library>
+    <location>libs/jszip/jszip.js</location>
+    <name>JSZip</name>
+    <license>MIT OR GPL-3.0</license>
+    <version>3.7.1</version>
+    <licenseversion></licenseversion>
+  </library>
+  <library>
+    <location>libs/jszip/filesaver.js</location>
+    <name>FileSaver.js</name>
+    <license>MIT</license>
+    <version>2.0.0</version>
+    <licenseversion></licenseversion>
+  </library>
+  <library>
+    <location>libs/autocomplete</location>
+    <name>jQuery Autocomplete</name>
+    <license>LGPL-3.0-or-later</license>
+    <version>1.0</version>
+    <licenseversion></licenseversion>
+  </library>
+  <library>
+    <location>libs/bootstrap-colorpicker</location>
+    <name>Bootstrap Colorpicker</name>
+    <license>MIT</license>
+    <version>3.3.0</version>
+    <licenseversion></licenseversion>
+  </library>
+  <library>
+    <location>resources/svg/icons/font-awesome</location>
+    <name>Font Awesome</name>
+    <license>CC-BY-4.0</license>
+    <version>6.0</version>
+    <licenseversion></licenseversion>
+  </library>
+  <library>
+    <location>resources/svg/icons/heroicons</location>
+    <name>Heroicons</name>
+    <license>MIT</license>
+    <version>1.0</version>
+    <licenseversion></licenseversion>
+  </library>
+  <library>
+    <location>resources/svg/icons/eva-icons</location>
+    <name>Eva Icons</name>
+    <license>MIT</license>
+    <version>1.1</version>
+    <licenseversion></licenseversion>
+  </library>
+  <library>
+    <location>resources/svg/icons/material-design</location>
+    <name>Material Design Icons</name>
+    <license>Apache-2.0</license>
+    <version>7.0</version>
+    <licenseversion></licenseversion>
+  </library>
+  <library>
+    <location>resources/svg/icons/ant-design-icons</location>
+    <name>Ant Design Icons</name>
+    <license>MIT</license>
+    <version>4.0</version>
+    <licenseversion></licenseversion>
+  </library>
+  <library>
+    <location>resources/svg/icons/boxicons</location>
+    <name>Boxicons</name>
+    <license>MIT</license>
+    <version>2.1</version>
+    <licenseversion></licenseversion>
+  </library>
+  <library>
+    <location>resources/svg/icons/clarity-icons</location>
+    <name>Clarity Icons</name>
+    <license>MIT</license>
+    <version>2.0</version>
+    <licenseversion></licenseversion>
+  </library>
+  <library>
+    <location>resources/svg/icons/coreui-icons</location>
+    <name>CoreUI Icons</name>
+    <license>CC-BY-4.0</license>
+    <version>2.0</version>
+    <licenseversion></licenseversion>
+  </library>
+  <library>
+    <location>resources/svg/icons/feather</location>
+    <name>Feather Icons</name>
+    <license>MIT</license>
+    <version>4.29</version>
+    <licenseversion></licenseversion>
+  </library>
+  <library>
+    <location>resources/svg/icons/ionicons</location>
+    <name>Ionicons</name>
+    <license>MIT</license>
+    <version>6.0</version>
+    <licenseversion></licenseversion>
+  </library>
+  <library>
+    <location>resources/svg/icons/tabler-icons</location>
+    <name>Tabler Icons</name>
+    <license>MIT</license>
+    <version>1.0</version>
+    <licenseversion></licenseversion>
+  </library>
+  <library>
+    <location>resources/svg/icons/unicons</location>
+    <name>Unicons</name>
+    <license>Apache-2.0</license>
+    <version>4.0</version>
+    <licenseversion></licenseversion>
+  </library>
+  <library>
+    <location>resources/svg/icons/iconoir</location>
+    <name>Iconoir</name>
+    <license>MIT</license>
+    <version>5.0</version>
+    <licenseversion></licenseversion>
+  </library>
+  <library>
+    <location>resources/svg/icons/css.gg</location>
+    <name>css.gg</name>
+    <license>MIT</license>
+    <version>2.0</version>
+    <licenseversion></licenseversion>
+  </library>
+  <library>
+    <location>resources/svg/icons/dripicons</location>
+    <name>Dripicons</name>
+    <license>CC-BY-SA-4.0</license>
+    <version>2.0</version>
+    <licenseversion></licenseversion>
+  </library>
+  <library>
+    <location>resources/svg/icons/jam-icons</location>
+    <name>Jam Icons</name>
+    <license>MIT</license>
+    <version>2.0</version>
+    <licenseversion></licenseversion>
+  </library>
+  <library>
+    <location>resources/svg/icons/octicons</location>
+    <name>Octicons</name>
+    <license>MIT</license>
+    <version>17.0</version>
+    <licenseversion></licenseversion>
+  </library>
+  <library>
+    <location>resources/svg/icons/system-uicons</location>
+    <name>System UIcons</name>
+    <license>Unlicense</license>
+    <version>1.0</version>
+    <licenseversion></licenseversion>
+  </library>
+  <library>
+    <location>resources/svg/icons/lineawesome</location>
+    <name>Line Awesome</name>
+    <license>CC-BY-4.0</license>
+    <version>1.3</version>
+    <licenseversion></licenseversion>
+  </library>
+  <library>
+    <location>resources/svg/icons/150-outlined-icons</location>
+    <name>150 Outlined Icons</name>
+    <license>Freeware</license>
+    <version>1.0</version>
+    <licenseversion></licenseversion>
+  </library>
+  <library>
+    <location>resources/svg/icons/77_essential_icons</location>
+    <name>77 Essential Icons</name>
+    <license>CC-BY</license>
+    <version>1.0</version>
+    <licenseversion></licenseversion>
+  </library>
+  <library>
+    <location>resources/svg/icons/elegant-font</location>
+    <name>Elegant Font</name>
+    <license>MIT OR GPL-2.0</license>
+    <version>1.0</version>
+    <licenseversion></licenseversion>
+  </library>
+  <library>
+    <location>resources/svg/icons/iconsax</location>
+    <name>Iconsax</name>
+    <license>Custom (free personal and commercial use)</license>
+    <version>1.0</version>
+    <licenseversion></licenseversion>
+  </library>
+  <library>
+    <location>resources/svg/icons/ikonate</location>
+    <name>Ikonate</name>
+    <license>MIT</license>
+    <version>1.0</version>
+    <licenseversion></licenseversion>
+  </library>
+  <library>
+    <location>resources/svg/icons/linea</location>
+    <name>Linea Iconset</name>
+    <license>CC-BY-4.0</license>
+    <version>1.0</version>
+    <licenseversion></licenseversion>
+  </library>
+  <library>
+    <location>resources/svg/icons/olicons</location>
+    <name>Olicons</name>
+    <license>SIL OFL 1.1 / MIT</license>
+    <version>2.0.1</version>
+    <licenseversion></licenseversion>
+  </library>
+  <library>
+    <location>resources/svg/icons/open-iconic</location>
+    <name>Open Iconic</name>
+    <license>MIT</license>
+    <version>1.1.1</version>
+    <licenseversion></licenseversion>
+  </library>
+  <library>
+    <location>resources/svg/icons/pe-icon-7-stroke</location>
+    <name>PE Icon 7 Stroke</name>
+    <license>Freeware (Pixeden)</license>
+    <version>1.0</version>
+    <licenseversion></licenseversion>
+  </library>
+  <library>
+    <location>resources/svg/icons/remix-icon</location>
+    <name>Remix Icon</name>
+    <license>Apache-2.0</license>
+    <version>2.5.0</version>
+    <licenseversion></licenseversion>
+  </library>
+  <library>
+    <location>resources/svg/icons/themify</location>
+    <name>Themify Icons</name>
+    <license>SIL OFL / MIT</license>
+    <version>1.0.1</version>
+    <licenseversion></licenseversion>
+  </library>
+</libraries>

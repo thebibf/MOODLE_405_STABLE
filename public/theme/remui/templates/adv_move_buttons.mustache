@@ -1,0 +1,62 @@
+{{!
+    This file is part of Moodle - http://moodle.org/
+
+    Moodle is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Moodle is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+
+    Edwiser RemUI
+    @package theme_remui
+    @copyright (c) 2023 WisdmLabs (https://wisdmlabs.com/)
+    @license http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+}}
+{{!
+    @template theme_remui/adv_move_buttons
+
+    Template for rendering block move buttons (move up and move down).
+
+    Example context (json):
+    {
+        "blockid": "123",
+        "movebuttons": [
+            {
+                "wrapperclass": "move-top",
+                "title": "Move up",
+                "iconclass": "edw-icon edw-icon-Up"
+            },
+            {
+                "wrapperclass": "move-bottom",
+                "title": "Move down",
+                "iconclass": "edw-icon edw-icon-Down"
+            }
+        ]
+    }
+}}
+{{#movebuttons}}
+<div class="{{wrapperclass}}" id="yui_3_17_2_1_1687317559796_554">
+    <span title="{{title}}">
+        <i class="{{iconclass}} d-flex" aria-hidden="true" style="cursor: pointer;"></i>
+    </span>
+</div>
+{{/movebuttons}}
+
+
+{{#js}}
+require(['jquery'], function($){
+	$(document).ready(function(){
+        if(!$('body[class*="latest-frontpage"]').length > 0 ){
+            $({{blockid}}).find(".move-bottom").detach().prependTo("#{{blockid}} .block-header-wrapper .menubar");
+            $({{blockid}}).find(".move-top").detach().prependTo("#{{blockid}} .block-header-wrapper .menubar");
+        }
+	});
+});
+{{/js}}

@@ -1,0 +1,1015 @@
+$roundedBorder: 16px;
+$radius-zero: 0px;
+.preset-modern {
+    .dropdown-menu {
+        border-radius: $roundedBorder !important;
+
+        --bs-dropdown-inner-border-radius: #{$roundedBorder};
+
+        &:has(.side-pre-link) {
+            a:first-child {
+                border-radius: 0px 3px 3px 0px;
+            }
+            a:last-child {
+                border-radius: 3px 0px 0px 3px;
+            }
+        }
+    }
+
+    .dropdown-item:hover {
+        background-color: #E6FBFE;
+    }
+
+    input:not([type="file"]) {
+        border-radius: 93px;
+    }
+
+    .navbar-nav {
+        .preset-nav-group {
+            padding-left: 18px;
+            padding-right: 18px;
+            border-radius: 56px;
+            background-color: $header-menu-element-bg-color;
+
+            @media screen and (max-width: 448px) {
+                gap: 12px !important;
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+
+            .nav-link {
+                border-radius: 128px !important;
+            }
+        }
+
+        .divider {
+            display: none !important;
+        }
+
+        .usermenu-wrapper {
+            gap: 0 !important;
+        }
+    }
+
+    #usernavigation .simplesearchform .input-group {
+        border-radius: 313px !important;
+        background-color: tint-color($brand-primary, 97%);
+    }
+
+    .nav-darkmode .dm-toggle {
+        background-color: transparent;
+    }
+
+    .edw-stats-wrapper {
+        border-radius: 32px;
+        .stat-block .h-exbold-2 {
+            font-weight: 600;
+        }
+    }
+
+    .edw-course-img-wrapper {
+        .edw-icon,
+        .menu-picker-select .menu-content .btn-primary {
+            border-radius: 128px !important;
+        }
+
+    }
+
+    .dropdown-toggle:not(.add-block-split-icon-btn):not(:has([id^="actionmenuactionsubpanel-"])),
+    .input-group,
+    .input-group .input-group-prepend,
+    .form-select,
+    .categoryfiltermenu {
+        border-radius: 128px !important;
+    }
+
+
+    .modal .modal-dialog .modal-content,
+    .moodle-dialogue .moodle-dialogue-wrap,
+    #feedback-module #feedback-highlighter {
+        border-radius: $roundedBorder;
+    }
+
+    .moodle-dialogue .moodle-dialogue-wrap .moodle-dialogue-hd {
+        border-top-left-radius: $roundedBorder !important;
+        border-top-right-radius: $roundedBorder !important;
+    }
+
+    .moodle-dialogue .moodle-dialogue-wrap .moodle-dialogue-bd {
+        border-bottom-left-radius: $roundedBorder;
+        border-bottom-right-radius: $roundedBorder;
+    }
+
+    &.pagelayout-course {
+        #page-header.hasbackground.design-1 {
+            border-radius: 20px;
+        }
+    }
+
+    .block_myoverview [data-region="paging-control-container"] .pagination .page-link {
+        --bs-pagination-border-radius: 128px;
+
+    }
+
+    &#page-course-overview {
+        #course-overview-page {
+            .collapsable-section {
+                --bs-border-radius-lg: #{$roundedBorder};
+
+                .course-overview {
+                    --bs-border-radius: #{$roundedBorder};
+                }
+            }
+        }
+    }
+
+    .block_calendar_month {
+        .day-number-circle {
+            border-radius: 29px !important;
+        }
+        .calendar-controls .edw-icon {
+            color: $brand-primary !important;
+        }
+
+    }
+
+    .primary-navigation .moremenu .nav-link.active {
+        font-weight: 700;
+    }
+
+    .input-group:not(:has(.edw-icon-Search, .fa-magnifying-glass, .fa-search)) input {
+        border-top-left-radius: 128px !important;
+        border-bottom-left-radius: 128px !important;
+    }
+    .block-timeline {
+        .rounded {
+            border-radius: 128px !important;
+        }
+    }
+    .calendarmonth {
+        th {
+            background-color: tint-color(#F0E5FF, 13%) !important;
+        }
+    }
+    .block_edwiserratingreview {
+        .reviewselector {
+            border-radius: 128px !important;
+        }
+    }
+
+    #page-footer {
+        .contentsocial  {
+            a {
+                border-radius: 128px !important;
+            }
+        }
+    }
+    .table-responsive {
+        border-radius: $roundedBorder;
+    }
+    //top left
+    table thead tr:first-child th:first-child {
+        border-top-left-radius: $roundedBorder;
+    }
+
+    // Top right
+    table thead tr:first-child th:last-child {
+        border-top-right-radius: $roundedBorder;
+    }
+
+    //bottom left
+    table tbody tr:last-child td:first-child {
+        border-bottom-left-radius: $roundedBorder;
+    }
+
+    //bottom right
+    table tbody tr:last-child td:last-child {
+        border-bottom-right-radius: $roundedBorder;
+    }
+
+    //user grades
+    #user-grades {
+        //top left
+        tr:first-child th:first-child,
+        tr:first-child td:first-child {
+            border-top-left-radius: $roundedBorder !important;
+        }
+
+        // top right
+        tr:first-child th:last-child,
+        tr:first-child td:last-child {
+            border-top-right-radius: $roundedBorder !important;
+        }
+
+        /* bottom left */
+        tr:last-child th:first-child,
+        tr:last-child td:first-child {
+            border-bottom-left-radius: $roundedBorder !important;
+        }
+
+        /* bottom right */
+        tr:last-child th:last-child,
+        tr:last-child td:last-child {
+            border-bottom-right-radius: $roundedBorder !important;
+        }
+    }
+    #nav-notification-popover-container{
+        .popover-region-container{
+            border-radius: $roundedBorder;
+            .see-all-link .popover-region-footer-container{
+                border-bottom-left-radius: $roundedBorder;
+                border-bottom-right-radius: $roundedBorder;
+            }
+        }
+    }
+    #usernavigation {
+        .edwiser-navigation {
+            .dropdown-toggle {
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+        }
+    }
+    .filepicker-filelist,
+    .filepicker-container {
+        border-radius: $roundedBorder;
+    }
+
+    &#page-user-profile {
+        .edw-tabs-navigation {
+            .nav-item  {
+                .nav-link {
+                    padding: 0px 6px !important;
+                }
+            }
+        }
+    }
+
+    #topofscroll {
+        .edw-tabs-navigation {
+            .nav-item  {
+                .nav-link {
+                    padding: 6px;
+                    border-radius: $roundedBorder;
+                }
+            }
+        }
+        #page-content {
+            #region-main {
+                .singleselect {
+                    form {
+                        gap: 10px !important;
+                    }
+                }
+            }
+            .generalbox {
+                .advancedoverride {
+                    form {
+                        gap: 10px !important;
+                    }
+                }
+                .capabilitysearchui  {
+                    .form-control {
+                        margin-left: 10px !important;
+                        margin-right: 10px !important;
+                    }
+                }
+            }
+        }
+    }
+
+    #page-footer .floating-buttons-wrapper #gotop {
+        border-color: white !important;
+    }
+
+    #firstinitial_page-item_All,
+    #lastinitial_page-item_All {
+        a {
+            border-top-left-radius: $roundedBorder;
+            border-bottom-left-radius: $roundedBorder;
+        }
+    }
+    #firstinitial_page-item_Z,
+    #lastinitial_page-item_Z {
+        a {
+            border-top-right-radius: $roundedBorder;
+            border-bottom-right-radius: $roundedBorder;
+        }
+    }
+
+    .block_with_controls .block-controls {
+        border-radius: 128px;
+    }
+
+    #add-block-float-menu .btn-group {
+        .floating-add-block-button {
+            border-top-left-radius: 128px;
+            border-bottom-left-radius: 128px;
+        }
+        .add-block-split-icon-btn {
+            border-top-right-radius: 128px;
+            border-bottom-right-radius: 128px;
+        }
+    }
+
+    #edw-quick-menu {
+        border-radius: 128px;
+    }
+
+    &.edw-m502 .drawer-toggles {
+        .newcourseindexicon-toggle,
+        .newrightsidebaricon-toggle {
+            border-radius: 128px
+        }
+    }
+
+    &.notloggedin .usermenu-wrapper .usermenu {
+        gap: 7px;
+        margin-left: 4px;
+
+        padding-left: 18px;
+        padding-right: 18px;
+        border-radius: 56px;
+        background-color: tint-color($brand-primary, 97%);
+
+    }
+
+    .navbar {
+        #usernavigation {
+            .userbutton {
+                padding: 5px;
+                .userinitials {
+                    width: 42px;
+                    height: 42px;
+                }
+            }
+        }
+    }
+    &.edw-m501{
+        #user-menu-toggle {
+            &::after {
+                margin-right: 10px;
+            }
+        }
+    }
+
+    .filemanager-container,
+    .fm-empty-container {
+        border-radius: $roundedBorder !important;
+    }
+    #fitem_id_newpassword {
+        .form-control {
+            border-radius: 128px;
+        }
+    }
+    .section-item {
+        .dropdown-menu {
+            .section-modchooser {
+                border-top-left-radius: $roundedBorder !important;
+                border-top-right-radius: $roundedBorder !important;
+            }
+        }
+    }
+
+    .filepicker  {
+        .fp-navbar {
+            padding: 6px 6px 0;
+        }
+        .fp-content {
+            padding: 0 6px 6px;
+        }
+    }
+
+    .message-app {
+        .input-group .input-group-text:has(.fa-magnifying-glass) {
+            border-radius: 128px 0 0 128px;
+        }
+        .footer-container .footer-input-btn-wrapper {
+            border-radius: 16px;
+        }
+        .view-conversation .content-message-container [data-region="day-messages-container"] .send [data-region="text-container"] {
+            border-radius: 16px;
+        }
+
+        [data-region="confirm-dialogue"] {
+            border-radius: $roundedBorder;
+        }
+
+        .list-group-item.list-group-item-action {
+            border-radius: 20px;
+        }
+    }
+    .primary-navigation {
+        .nav-link {
+            padding: 5px !important;
+            border-radius: 128px;
+        }
+        [data-key="coursecat"] .catselector-menu,
+        .dropdownmoremenu .dropdown-toggle.nav-link  {
+            background-color: transparent !important;
+        }
+    }
+    .simplesearchform {
+        .searchbar  input {
+           border-radius: 128px !important;
+        }
+    }
+    .block_edwiseradvancedblock {
+        .container-fluid  {
+            border-radius:  $card-border-radius !important;
+        }
+    }
+
+    .block {
+        .nav-item .nav-link {
+            border-radius: 128px;
+        }
+    }
+
+    table {
+        border-color: transparent !important;
+    }
+    #menudayfilter > div a:last-child {
+        border-bottom-left-radius: $roundedBorder !important;
+        border-bottom-right-radius: $roundedBorder !important;
+    }
+    #page-admin-user-profile-index {
+        .alert-danger {
+         border-left: 0px;
+         border-right: 0px;
+         td {
+            border-radius: 16px;
+         }
+      }
+   }
+
+   textarea {
+    border-radius: 16px;
+   }
+
+   .block select {
+    border-radius: 128px;
+   }
+
+   .toast-wrapper .edw_toast  {
+        border-radius: 16px;
+   }
+
+   .block_edwiser_grader #edg-main-content {
+        .edg-search-container .input-group-prepend .input-group-text{
+            border-top-left-radius: 128px;
+            border-bottom-left-radius: 128px;
+        }
+
+        #edg-quizlist-content .edg-quiz-item {
+            border-radius: 16px !important;
+        }
+   }
+    #edwiser_site_monitor-section {
+        .nav-link.active {
+                border-bottom-color: rgb(213, 221, 234);
+        }
+    }
+    .modchooser {
+        .modchoosernav  {
+            .nav-link {
+                border-radius: 128px !important;
+            }
+        }
+    }
+
+    &#page-admin-setting-themesettingremui #page-content .edw-tabs-navigation .nav-tabs {
+        height: 100px;
+    }
+
+    &.focusmode {
+        .navbar.fm-navbar .courseheaderbar .focus-mode-active-info-wrapper .focus-mode-active-info {
+            border-radius: 128px;
+        }
+        .activity-navigation {
+            .nav-item {
+                .nav-link {
+                    border-radius: $btn-border-radius;
+                }
+
+                .focus-dropdown-menu {
+                    border-radius: 16px;
+                }
+            }
+        }
+    }
+
+    .block_globalsearch,
+    &#page-mod-forum-view .simplesearchform .input-group,
+    &#page-course-management .simplesearchform .input-group {
+        input.form-control {
+            border-radius: 128px 0px 0px 128px ;
+        }
+    }
+
+    .block_timeline .block-timeline .edw-timeline-search-filter .searchbar input {
+        font-weight: 300;
+    }
+
+    #course-archive-main-container {
+        .btn-group.view-buttons {
+            gap: 10px;
+
+            .togglebtn {
+                padding: 5px;
+                border-radius: 128px;
+            }
+        }
+
+        .empty-msg {
+            border-radius: 8px;
+        }
+    }
+    &.edw-m500 .modchoosercontainer .chooser-container .option {
+        --bs-card-border-radius: #{$roundedBorder};
+    }
+
+    .edwiser_plugins_recommendation .recommendation-list .recommendation-item .card {
+        border-radius: $roundedBorder !important;
+        .card-header:first-child {
+            border-radius: $roundedBorder !important;
+        }
+    }
+    #fitem_id_zipfile {
+        .filepicker-filelist {
+            border-color: $input-border-color !important;
+        }
+    }
+    .block_edwiseradvancedblock {
+        .fccourses-wrapper .dashboard-card {
+            border-radius: $roundedBorder !important;
+            .skilltag {
+                border-radius: 128px;
+            }
+            .menu-picker-select .coursemenubtn {
+                border-radius: 128px;
+            }
+        }
+    }
+    .block_edwiser_site_monitor {
+        #page-admin-plugins {
+            .server-plugins-list .nav-tabs {
+                margin-bottom: 4px;
+                .nav-link.active {
+                    border-bottom-color:#d5ddea;
+                }
+            }
+        }
+    }
+}
+
+.preset-classic:not(.block_edwiseradvancedblock) {
+    .dropdown.show {
+        border-radius: $radius-zero;
+    }
+    .dropdown-menu.show {
+        --bs-dropdown-inner-border-radius: #{$radius-zero} !important;
+        border-radius: $radius-zero;
+    }
+    img {
+        border-radius: $radius-zero !important;
+    }
+    input:not([type="checkbox"]) {
+        border-radius: $radius-zero;
+    }
+    .block-myoverview {
+        .searchbar {
+            .input-group-prepend {
+                border-radius: $radius-zero !important;
+            }
+        }
+    }
+    #wdm_dashboard-stats {
+        border-radius: $radius-zero;
+    }
+    #wdm_course-stats {
+        border-radius: $radius-zero;
+    }
+    #page-header{
+        border-radius: $radius-zero !important;
+    }
+    .badge {
+        border-radius: $radius-zero !important;
+    }
+    .userinitials {
+        border-radius: $radius-zero;
+    }
+    #course-addsection a{
+        border-radius: $radius-zero !important;
+    }
+    .section {
+        .activity-item {
+            border-radius: $radius-zero !important;
+        }
+    }
+    .section,
+    .section-item {
+        .activity-availability,
+        .availabilityinfo,
+        .isrestricted,
+        .isfullinfo,
+        .activity-dates,
+        .divider-content .add-content {
+            border-radius: $radius-zero !important;
+        }
+    }
+    #fitem_id_summary_editor {
+        .tox-tinymce {
+            border-radius: $radius-zero;
+        }
+    }
+    #id_category_1container {
+        .overflow-hidden {
+            border-radius: $radius-zero !important;
+        }
+    }
+    #firstinitial_page-item_All,
+    #lastinitial_page-item_All {
+        a {
+            border-top-left-radius: $radius-zero;
+            border-bottom-left-radius: $radius-zero;
+        }
+    }
+    .initialbargroups .pagination-sm:first-child .page-item:first-child .page-link {
+            border-top-left-radius: $radius-zero;
+            border-bottom-left-radius: $radius-zero;
+    }
+    .initialbargroups .pagination-sm:last-child .page-item:last-child .page-link {
+            border-top-right-radius: $radius-zero;
+            border-bottom-right-radius: $radius-zero;
+    }
+    #firstinitial_page-item_Z,
+    #lastinitial_page-item_Z {
+        a {
+            border-top-right-radius: $radius-zero;
+            border-bottom-right-radius: $radius-zero;
+        }
+    }
+    #formactionid {
+        border-radius: $radius-zero;
+    }
+    #course-overview-page {
+        .collapsable-section {
+            border-radius: $radius-zero !important;
+            .course-overview {
+                border-radius: $radius-zero !important;
+            }
+        }
+    }
+    .form-select {
+        border-radius: $radius-zero;
+    }
+    .table-responsive,
+    .generaltable{
+        border-radius: $radius-zero !important;
+
+    }
+    .alert,
+    .alert-info {
+        border-radius: $radius-zero !important;
+    }
+    .content-bank-container,
+    .content-bank-container,
+    .cb-navbar {
+        border-radius: $radius-zero !important;
+    }
+    .calendarwrapper {
+        .calendarmonth  {
+            td.clickable:not(.today):hover .day-number-circle {
+                border-radius: $radius-zero !important;
+            }
+            td.today .day-number-circle {
+                border-radius: $radius-zero !important;
+            }
+        }
+    }
+    .navbar {
+        .sub-nav {
+            .primary-navigation {
+                .nav-link.active::before{
+                    content: unset;
+                }
+                .dropdownmoremenu {
+                    .nav-link.active {
+                        .edw-icon-more {
+                            color: $header-menu-text-active-color;
+                        }
+                    }
+                }
+            }
+            [data-key="coursecat"] {
+                a {
+                    padding-right: 15px;
+                }
+                .category-wrapper .toggle-btn {
+                    border-radius: $radius-zero;
+                }
+            }
+            .primary-navigation,
+            #usernavigation {
+                [data-key="recentcourses"] .nav-link{
+                    padding-left: 14px;
+                    padding-right: 14px;
+                    background-color: $header-menu-element-bg-color;
+                }
+                .nav-item:not(.dropdownmoremenu) {
+                    .nav-link.active {
+                        padding-left: 20px;
+                        padding-right: 20px;
+                        background-color: $header-menu-element-bg-color;
+                    }
+                }
+            }
+        }
+    }
+    &.notloggedin {
+        @include media-breakpoint-up(lg) {
+            .navbar {
+                .sub-nav {
+                    .primary-navigation {
+                        flex-basis: auto;
+                        flex-grow: 1;
+                        .moremenu.navigation {
+                            .navbar-nav {
+                                width: 100%;
+                                display: flex;
+                                justify-content: flex-end;
+                            }
+                            [data-key="coursecat"] {
+                                margin-right: auto;
+                            }
+                            
+                        }
+                    }
+                    #usernavigation {
+                        flex-basis: auto;
+                        flex-grow: 1;
+                        margin-left: 24px !important;
+                        justify-content: flex-end;
+                    }
+                }
+            }
+        }
+    }
+    &:not(.notloggedin):not(.isguest) {
+        @include media-breakpoint-up(lg) {
+            .navbar {
+                .sub-nav {
+                    .primary-navigation {
+                        // width: 100%;
+                        flex-basis: auto;
+                        flex-grow: 1;
+                        .moremenu.navigation {
+                            width: 100%;
+                            .navbar-nav {
+                                width: 100%;
+                                display: flex;
+                                justify-content: flex-end;
+                            }
+                            [data-key="coursecat"] {
+                                margin-right: auto;
+                            }
+                        }
+                    }
+                    #usernavigation {
+                        // width: 100%;
+                        flex-basis: auto;
+                        flex-grow: 1;
+                        margin-left: 24px !important;
+                        .edwiser-navigation {
+                            margin-right: auto;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #theme_remui-drawers-courseindex
+    .drawercontent #courseindex #courseindex-content
+    .courseindex .courseindex-section{
+        border-radius: $radius-zero;
+        .courseindex-item {
+            border-radius: $radius-zero;
+        }
+    }
+    .dropdown-toggle:not(.add-block-split-icon-btn),
+    .input-group {
+        border-radius: $radius-zero !important;
+    }
+    .input-group {
+        .form-control{
+            border-radius: $radius-zero;
+        }
+    }
+
+    #page-footer:has(.section-footer-design-4)
+    .footer-secondarysection-wrapper
+    .social-links-wrapper a {
+        background-color: transparent !important;
+        border-radius: $radius-zero !important;
+    }
+    .edw-course-card-grid {
+        .menu-picker-select {
+            .menu-picker span,
+            .menu-content a {
+                border-radius: $radius-zero !important;
+            }
+        }
+        .edw-card-design-hd .instructorscount {
+            border-radius: $radius-zero;
+        }
+    }
+    .edw-course-img-wrapper {
+        .edw-icon,
+        .menu-picker-select .menu-content .btn-primary {
+            border-radius: $radius-zero !important;
+        }
+
+    }
+    &#page-course-recommendations {
+        input,
+        button {
+            border-radius: $radius-zero !important;
+        }
+    }
+    .pagination .page-item a {
+            border-radius: $radius-zero;
+    }
+    .btn.btn-icon {
+        border-radius: $radius-zero;
+    }
+    &#page-admin-tool-usertours-configure {
+        .tour-actions li {
+            border-radius: $radius-zero;
+        }
+    }
+    &.edw-m502 .drawer-toggles {
+        .newcourseindexicon-toggle,
+        .newrightsidebaricon-toggle {
+            border-radius: $radius-zero;
+        }
+    }
+    #nav-notification-popover-container {
+        .popover-region-container {
+            border-radius: $radius-zero;
+        }
+    }
+    .modal .modal-dialog .modal-content,
+    .moodle-dialogue .moodle-dialogue-wrap,
+    #feedback-module #feedback-highlighter {
+        border-radius: $radius-zero !important;
+    }
+    .newcourseindexicon-toggle {
+        border-radius: $radius-zero;
+    }
+    #edw-quick-menu,
+    #edw-quick-menu .quick-menu-nav
+    .menu-item:hover {
+        border-radius: $radius-zero;
+    }
+    &#page-user-profile {
+        .profile-info-item-wrapper {
+            #description,
+            #address,
+            #country,
+            .interest-field-disabled {
+                border-radius: $radius-zero;
+            }
+        }
+    }
+    .tox-tinymce {
+        border-radius: $radius-zero;
+        .tox-edit-area::before {
+            border-radius: $radius-zero;
+        }
+    }
+    .searchbar input {
+        border-radius: $radius-zero !important;
+    }
+    .dropdown-menu.dropdown-subpanel-content {
+        .dropdown-item-outline {
+            border-radius: $radius-zero !important;
+        }
+    }
+    #block-region-side-pre {
+        .block-content-area {
+            .calendarwrapper {
+                border-radius: $radius-zero;
+            }
+        }
+    }
+    #fitem_id_overviewfiles_filemanager {
+        .filemanager-container {
+            border-radius: $radius-zero;
+        }
+    }
+    .block-body-wrapper {
+        .block-header-wrapper {
+            .block-controls.header {
+                border-radius: $radius-zero;
+            }
+        }
+    }
+    #courseindexdrawercontrols {
+        .btn.btn-icon {
+            border-radius: $radius-zero !important;
+        }
+    }
+    .nav-tabs {
+        .nav-item{
+            border-radius: $radius-zero;
+        }
+        .nav-link {
+            border-radius: $radius-zero;
+        }
+    }
+    &#page-admin-reportbuilder-edit {
+        .alert.alert-info.alert-block {
+            border-radius: $radius-zero !important;
+        }
+    }
+    &#page-admin-tool-generator-maketestcourse {
+        .progressbar_container {
+            .progress{
+                border-radius: $radius-zero;
+            }
+        }
+    }
+    .progress-data-wrapper,
+    .progress-resume-wrapper {
+        .progress {
+            border-radius: $radius-zero !important;
+        }
+    }
+    &.focusmode #wdm-courseheader .progress {
+        border-radius: $radius-zero !important;
+    }
+    #dateselector-calendar-content {
+        border-radius: $radius-zero;
+    }
+    .table-responsive {
+        border-radius: $radius-zero;
+    }
+    table.epb_table {
+        border-radius: 0px;
+    }
+    //top left
+    table:not(.calendartable) thead tr:first-child th:first-child {
+        border-top-left-radius: $radius-zero;
+    }
+
+    // Top right
+    table:not(.calendartable) thead tr:first-child th:last-child {
+        border-top-right-radius: $radius-zero;
+    }
+
+    //bottom left
+    table:not(.calendartable) tbody tr:last-child td:first-child {
+        border-bottom-left-radius: $radius-zero;
+    }
+
+    //bottom right
+    table:not(.calendartable) tbody tr:last-child td:last-child {
+        border-bottom-right-radius: $radius-zero;
+    }
+    .modchoosercontainer {
+        .modchoosernav {
+            .nav-item {
+                border-radius: $radius-zero;
+            }
+        }
+    }
+    .nav-darkmode .dm-toggle {
+        background-color: transparent;
+    }
+    .nav-pills .nav-link {
+        border-radius: $radius-zero;
+    }
+    &.edw-m501,
+    &.edw-m500 {
+        .sub-nav {
+            #usernavigation:has(.simplesearchform) {
+                .edwiser-navigation {
+                    margin-right: unset !important;
+                }
+                .simplesearchform {
+                    margin-right: auto;
+                }
+            }
+        }
+    }
+
+
+    #page-footer:has(.section-footer-design-2) #footer-column-4 .contentsocial.social-links a {
+        border-radius: $radius-zero !important;
+    }
+
+    #page-footer .floating-buttons-wrapper #gotop {
+        border-color: white !important;
+    }
+}

@@ -1,0 +1,64 @@
+{{!
+    This file is part of Moodle - http://moodle.org/
+
+    Moodle is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Moodle is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+}}
+{{!
+    @template filter_edwiserpbf/coursecard
+
+    Course card template.
+
+    Classes required for JS: None.
+    Data attributes required for JS: None.
+    Context variables required for this template: courses.
+
+    Example context (json):
+    {}
+}}
+{{#courses}}
+<div class="slick-carousel-item h-100" data-courseid="{{courseid}}" data-catid={{categoryid}} data-courseshortname="{{shortname}}">
+    <div class="card-container">
+        <div class="card">
+            <div class="img-box">
+                <img src="{{courseimage}}" alt="{{coursename}}">
+                <p class="card-name">
+                    {{{categoryname}}}
+                </p>
+
+                <div class="wdm-course-card-actions d-flex" style="gap: 8px;">
+                    {{^visible}}
+                        <div class="visibilityicon d-flex align-items-center justify-content-center">
+                            {{! <i class="hidden-icon edw-icon edw-icon-Hide" aria-hidden="true" title="Hidden Course"></i> }}
+                            <img class="epb-img-icon" src="{{{hideiconimg}}}"  width="16" height="16">
+                        </div>
+                    {{/visible}}
+                    {{#canview_manage_course_action}}
+                        {{> local_edwiserpagebuilder/remuiblck/manage_courses_list_actions }}
+                    {{/canview_manage_course_action}}
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="card-content">
+                    <p class="card-title ellips-item-2 heading-color">{{{coursename}}}</p>
+                    <p class="card-desc ellips-item-2 paragraph-color">{{coursesummary}}</p>
+                </div>
+                <a href="{{courseurl}}" class="card-btn">
+                    <button class="btn btn-secondary">{{#str}}view,filter_edwiserpbf{{/str}}</button>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+{{/courses}}

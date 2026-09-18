@@ -1,0 +1,42 @@
+{{!
+    This file is part of Moodle - http://moodle.org/
+
+    Moodle is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Moodle is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+}}
+
+{{#blocks}}
+<div class="card-wrapper" data-parentblock="{{name}}" data-block="{{name}}" data-blockid="{{id}}" title="{{title}}">
+    <div class="card-item h-100 ">
+        <a href="{{url}}&amp;bui_addblock={{name}}{{#section}}&amp;section={{section}}{{/section}}" class="blockurl"></a>
+        <div class="card">
+            <a href="{{url}}&amp;bui_addblock={{name}}" class="p-0 " title="{{title}}" >
+                <div class="card-body d-flex justify-content-center align-items-center position-relative">
+                    <div class="block-cover " style="background: url('https://staticcdn.edwiser.org/CDN/moodle_block_plugins/{{name}}.png'); !important">
+
+                    </div>
+                </div>
+            </a>
+            <div class="card-footer">
+                <div class="h-semibold-6 import-block-link"><a href="{{url}}&amp;bui_addblock={{name}}" class="text-decoration-none">{{title}}</a></div>
+            </div>
+        </div>
+    </div>
+</div>
+{{/blocks}}
+
+{{^blocks}}
+    <div class="alert alert-primary" role="alert">
+        {{#str}} noblockstoaddhere {{/str}}
+    </div>
+{{/blocks}}

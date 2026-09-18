@@ -1,0 +1,59 @@
+{{!
+    This file is part of Moodle - http://moodle.org/
+
+    Moodle is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Moodle is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+
+    Edwiser RemUI
+    @package theme_remui
+    @copyright (c) 2023 WisdmLabs (https://wisdmlabs.com/)
+    @license http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+}}
+{{!
+    @template theme_remui/coursearchive_menu-picker-select
+
+    Template for rendering course archive menu picker with action buttons.
+
+    Example context (json):
+    {
+        "enrollusers": "/enrol/users.php?id=2",
+        "grader": "/grade/report/grader/index.php?id=2",
+        "activity": "/report/outline/index.php?id=2",
+        "editcourse": "/course/edit.php?id=2"
+    }
+}}
+<div class="menu-picker-select">
+    <div class="menu-picker btn-group" role="group">
+        {{! <label for="show-menu" class="menu-button"><span></span></label> }}
+        <span class="edw-icon edw-icon-Setting menu-button"></span>
+        <span class="edw-icon edw-icon-Cancel d-none" aria-hidden="true" aria-label=""></span>
+    </div>
+    <div class="menu-content d-none " aria-label="Vertical button group">
+        <a href="{{ enrollusers }}" title="{{# str }} enroluser, theme_remui {{/ str }}"
+            class="btn btn-primary ">
+            <span class="edw-icon edw-icon-Group-user" aria-hidden="true"></span>
+        </a>
+        <a href="{{ grader }}" title="{{# str }} graderreport, theme_remui {{/ str }}"
+            class="btn btn-primary ">
+            <span class="edw-icon edw-icon-Rating-stars_Default" aria-hidden="true"></span>
+        </a>
+        <a href="{{ activity }}" title="{{# str }} activityeport, theme_remui {{/ str }}"
+            class="btn btn-primary">
+            <span class="edw-icon edw-icon-Survey_Activity " aria-hidden="true"></span>
+        </a>
+        <a href="{{ editcourse }}" title="{{# str }} editcourse, theme_remui {{/ str }}"
+            class="btn btn-primary">
+            <span class="edw-icon edw-icon-Edit" aria-hidden="true"></span>
+        </a>
+    </div>
+</div>
